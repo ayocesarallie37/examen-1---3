@@ -1,28 +1,26 @@
-function encontrarMayorEdad() {
-    let names = [];
-    let ages = [];
+function obtenerNombreMayor() {
+  let nombres = [];
+  let edades = [];
 
-    for (var i = 1; i <= 3; i++) {
-        let name = parseInt(prompt("Introduce el nombre " + i + "."));
-        let age = Number(prompt("Introduce la edad de " + name + "."));
-    
-        names.push(name);
-        ages.push(ages);
-    }
+  // Pedir al usuario que ingrese los nombres y las edades
+  for (let i = 0; i < 3; i++) {
+    let nombre = prompt(`Ingresa el nombre ${i + 1}:`);
+    let edad = parseInt(prompt(`Ingresa la edad de ${nombre}:`));
 
-    let mayor = ages[0];
-    let ind_mayor = 0;
+    nombres.push(nombre);
+    edades.push(edad);
+  }
 
-    for (var j = 1; j < ages.length; j++) {
-      if (ages[j] > mayor) {
-        mayor = ages[j];
-        ind_mayor = j;
-      }
-    }
+  // Encontrar la mayor edad
+  let mayorEdad = Math.max(...edades);
+  let indiceMayor = edades.indexOf(mayorEdad);
 
-    let name_mayor = names[ind_mayor];
-    let age_mayor = ages[ind_mayor];
+  // Obtener el nombre correspondiente a la mayor edad
+  let nombreMayor = nombres[indiceMayor];
 
-
-    alert("La persona de mayor edad es " + name_mayor + " con " + age_mayor + " años.");
+  // Mostrar el nombre del mayor
+  alert(`El nombre del mayor es: ${nombreMayor}`);
 }
+
+// Llamar a la función para ejecutar el programa
+obtenerNombreMayor();
