@@ -1,26 +1,22 @@
-function obtenerNombreMayor() {
-  let nombres = [];
-  let edades = [];
+  const persona1 = prompt('Ingrese el nombre de la Persona 1:');
+  const edad1 = parseInt(prompt(`Ingrese la edad de ${persona1}:`));
 
-  // Pedir al usuario que ingrese los nombres y las edades
-  for (let i = 0; i < 3; i++) {
-    let nombre = prompt(`Ingresa el nombre ${i + 1}:`);
-    let edad = parseInt(prompt(`Ingresa la edad de ${nombre}:`));
+  const persona2 = prompt('Ingrese el nombre de la Persona 2:');
+  const edad2 = parseInt(prompt(`Ingrese la edad de ${persona2}:`));
 
-    nombres.push(nombre);
-    edades.push(edad);
+  const persona3 = prompt('Ingrese el nombre de la Persona 3:');
+  const edad3 = parseInt(prompt(`Ingrese la edad de ${persona3}:`));
+
+  let resul = '';
+
+  if (edad1 > edad2 && edad1 > edad3) {
+    resul = `La ${persona1} es la o el mayor.`;
+  } else if (edad2 > edad1 && edad2 > edad3) {
+    resul = `La ${persona2} es la o el mayor.`;
+  } else if (edad3 > edad1 && edad3 > edad2) {
+    resul = `${persona3} es la o el mayor.`;
+  } else {
+    resul = 'Hay dos personas con la misma edad.';
   }
 
-  // Encontrar la mayor edad
-  let mayorEdad = Math.max(...edades);
-  let indiceMayor = edades.indexOf(mayorEdad);
-
-  // Obtener el nombre correspondiente a la mayor edad
-  let nombreMayor = nombres[indiceMayor];
-
-  // Mostrar el nombre del mayor
-  alert(`El nombre del mayor es: ${nombreMayor}`);
-}
-
-// Llamar a la función para ejecutar el programa
-obtenerNombreMayor();
+  document.getElementById('edadMax').innerText = resul;
