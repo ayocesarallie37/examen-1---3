@@ -10,11 +10,11 @@
   let resul = '';
 
   if (edad1 > edad2 && edad1 > edad3) {
-    resul = `La ${persona1} es la o el mayor.`;
+    resul = 'La ${persona1} es la o el mayor.';
   } else if (edad2 > edad1 && edad2 > edad3) {
-    resul = `La ${persona2} es la o el mayor.`;
+    resul = 'La ${persona2} es la o el mayor.';
   } else if (edad3 > edad1 && edad3 > edad2) {
-    resul = `${persona3} es la o el mayor.`;
+    resul = '${persona3} es la o el mayor.';
   } else {
     resul = 'Hay dos personas con la misma edad.';
   }

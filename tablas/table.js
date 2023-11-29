@@ -1,8 +1,8 @@
-var i, j;
-var filas = Number(prompt("Introduce el numero de filas"));
-var colum = Number(prompt("Introduce el numero de columnas"));
+let i, j;
+let filas = Number(prompt("Introduce el numero de filas"));
+let colum = Number(prompt("Introduce el numero de columnas"));
    
-var res = filas * colum;
+let res = filas * colum;
    
 document.write("<table border>");
    
