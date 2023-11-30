@@ -16,7 +16,7 @@ if (edad1 > edad2 && edad1 > edad3) {
 } else if (edad3 > edad1 && edad3 > edad2) {
  resul = `La persona ${persona3} es la o el mayor.`;
 } else {
- resul = 'Las 3 personas tienen la misma edad.';
+ resul = 'Hay 2 personas que tienen la misma edad.';
 }
 
 document.getElementById('edadMax').innerText = resul;
